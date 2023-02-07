@@ -1,53 +1,98 @@
-# Astro Starter Kit: Basics
+# Astro Template
 
 ```
-npm create astro@latest -- --template basics
+npm create astro@latest -- --template vadymstebakov/astro-template
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+## ⚙️ Setup
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+1. Install [NodeJS](https://nodejs.org/en/);
+    > Require [Node.js](https://nodejs.org) version >= 16.12.0.
+2. Install the NPM dependencies by running `npm ci`;
+3. You should create `.env.local` file for secret keys (look at `env.local.example` file), if the project has secret variables. Read more about [environment variables](https://docs.astro.build/en/guides/environment-variables/);
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## 🧞 Commands
 
+-   Run the local dev server at `localhost:3000`:
+    ```
+    npm run dev
+    ```
+-   Build your production site to `./dist/`:
+    ```
+    npm run build
+    ```
+-   Preview your build locally, before deploying:
+    ```
+    npm run preview
+    ```
+-   Run CLI commands like `astro add`, `astro check`:
+    ```
+    npm run astro ...
+    ```
+-   Check your JavaScript/TypeScript for errors and warnings:
+    ```
+    npm run lint:eslint
+    ```
+-   Check your CSS for errors and warnings:
+    ```
+    npm run lint:stylelint
+    ```
+-   Check your code formatting:
+    ```
+    npm run lint:prettier
+    ```
+-   Fix your code formatting:
+    ```
+    npm run lint:prettier:fix
+    ```
+-   Check your code all together:
+    ```
+    npm run lint
+    ```
+-   Install husky:
+    ```
+    npm run prepare
+    ```
 
 ## 🚀 Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
 ```
-/
-├── public/
-│   └── favicon.svg
+└── public/
+    ├── /images
+    ├── apple-touch-icon.png /* An icon 180x180 for iPhone or iPad */
+    ├── favicon.ico /* An icon 32x32 for Safari */
+    └── favicon.svg /* An icon for the rest browsers */
 ├── src/
 │   ├── components/
 │   │   └── Card.astro
 │   ├── layouts/
 │   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── pages/
+│   │   └── index.astro
+│   ├── styles/
+│   │   ├── reset.css
+│   │   └── variables.css│
+│   ├── constants.ts
+│   ├── types.ts
+│   └── utils.ts
 └── package.json
 ```
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+`src/layouts/` you can put common layouts, grids etc.
 
-Any static assets, like images, can be placed in the `public/` directory.
+`src/components/` you can put common components.
 
-## 🧞 Commands
+`src/constants.ts` you can write common constants.
 
-All commands are run from the root of the project, from a terminal:
+`src/types.ts` you can write common types.
 
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+`src/utils.ts` you can write common utils, helpers functions.
+
+Any static assets, like images, fonts can be placed in the `public/` directory.
 
 ## 👀 Want to learn more?
 

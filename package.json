@@ -15,7 +15,8 @@
         "astro": "astro",
         "lint:eslint": "eslint --cache --max-warnings 0 --report-unused-disable-directives \"src/**/*.{js,ts,astro}\"",
         "lint:stylelint": "stylelint --cache -q \"**/*.{css,astro}\"",
-        "lint:prettier": "prettier --check \"**/*.{js,ts,json,astro,html,css}\"",
+        "lint:prettier": "prettier --check \"**/*.{js,ts,tsx,jsx,json,astro,html,css}\"",
+        "lint:prettier:fix": "prettier --write \"**/*.{js,ts,tsx,jsx,json,astro,html,css}\"",
         "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
         "prepare": "husky install"
     },
