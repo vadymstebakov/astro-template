@@ -1,6 +1,6 @@
 # Astro Template
 
-Should use this command for create the project. [Read more about that](https://docs.astro.build/en/install/auto/#starter-templates).
+Should use this command to create the project. [Read more about it](https://docs.astro.build/en/install/auto/#starter-templates).
 
 ```
 npm create astro@latest -- --template vadymstebakov/astro-template
