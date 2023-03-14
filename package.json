@@ -9,14 +9,14 @@
         "npm": ">=8.1.0"
     },
     "scripts": {
-        "dev": "astro dev --host",
+        "dev": "astro dev",
         "build": "astro build",
-        "preview": "astro preview --host",
+        "preview": "astro preview",
         "astro": "astro",
         "lint:eslint": "eslint --cache --max-warnings 0 --report-unused-disable-directives \"src/**/*.{js,ts,astro}\"",
         "lint:stylelint": "stylelint --cache -q \"**/*.{css,astro}\"",
-        "lint:prettier": "prettier --check \"**/*.{js,ts,tsx,jsx,json,astro,html,css}\"",
-        "lint:prettier:fix": "prettier --write \"**/*.{js,ts,tsx,jsx,json,astro,html,css}\"",
+        "lint:prettier": "prettier --check \"**/*.{js,ts,tsx,jsx,json,astro,html,css,mjs,cjs}\"",
+        "lint:prettier:fix": "prettier --write \"**/*.{js,ts,tsx,jsx,json,astro,html,css,mjs,cjs}\"",
         "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier",
         "prepare": "husky install"
     },
@@ -24,21 +24,21 @@
         "astro": "^2.0.6"
     },
     "devDependencies": {
-        "@commitlint/cli": "^17.4.2",
-        "@commitlint/config-conventional": "^17.4.2",
-        "@typescript-eslint/eslint-plugin": "^5.51.0",
-        "@typescript-eslint/parser": "^5.51.0",
-        "autoprefixer": "^10.4.13",
-        "eslint": "^8.33.0",
-        "eslint-config-prettier": "^8.6.0",
-        "eslint-plugin-astro": "^0.23.0",
+        "@commitlint/cli": "^17.4.4",
+        "@commitlint/config-conventional": "^17.4.4",
+        "@typescript-eslint/eslint-plugin": "^5.55.0",
+        "@typescript-eslint/parser": "^5.55.0",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.36.0",
+        "eslint-config-prettier": "^8.7.0",
+        "eslint-plugin-astro": "^0.24.0",
         "eslint-plugin-prettier": "^4.2.1",
         "husky": "^8.0.3",
         "postcss-html": "^1.5.0",
-        "prettier": "^2.8.3",
+        "prettier": "^2.8.4",
         "prettier-plugin-astro": "^0.8.0",
-        "stylelint": "^14.16.1",
+        "stylelint": "^15.2.0",
         "stylelint-config-html": "^1.1.0",
-        "stylelint-config-standard": "^29.0.0"
+        "stylelint-config-standard": "^30.0.1"
     }
 }
