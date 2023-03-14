@@ -1,5 +1,7 @@
 # Astro Template
 
+Should use this command for create the project. [Read more about that](https://docs.astro.build/en/install/auto/#starter-templates).
+
 ```
 npm create astro@latest -- --template vadymstebakov/astro-template
 ```
@@ -9,7 +11,7 @@ npm create astro@latest -- --template vadymstebakov/astro-template
 1. Install [NodeJS](https://nodejs.org/en/);
     > Require [Node.js](https://nodejs.org) version >= 16.12.0.
 2. Install the NPM dependencies by running `npm ci`;
-3. You should create `.env.local` file for secret keys (look at `env.local.example` file), if the project has secret variables. Read more about [environment variables](https://docs.astro.build/en/guides/environment-variables/);
+3. If it makes sense, you should create `.env.local` file for secret keys (look at `env.local.example` file), if the project has secret variables. Read more about [environment variables](https://docs.astro.build/en/guides/environment-variables/);
 
 ## 🧞 Commands
 
@@ -73,7 +75,8 @@ Inside of your Astro project, you'll see the following folders and files:
 │   │   └── index.astro
 │   ├── styles/
 │   │   ├── reset.css
-│   │   └── variables.css│
+│   │   ├── variables.css
+│   │   └── index.css
 │   ├── constants.ts
 │   ├── types.ts
 │   └── utils.ts
@@ -93,6 +96,10 @@ Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page
 `src/utils.ts` you can write common utils, helpers functions.
 
 Any static assets, like images, fonts can be placed in the `public/` directory.
+
+## 🚧 Troubleshooting
+
+-   Husky hooks can ignore because it's not set as executable. You should use [this solve](https://github.com/typicode/husky/issues/1177#issuecomment-1212831091);
 
 ## 👀 Want to learn more?
 
