@@ -89,8 +89,8 @@
         "value-keyword-case": "lower",
         "color-function-notation": null,
         "value-no-vendor-prefix": null,
-        "selector-class-pattern": "^[a-zA-Z][a-zA-Z0-9-]+$",
-        "selector-id-pattern": "^[a-zA-Z][a-zA-Z0-9-]+$",
+        "selector-class-pattern": "^[a-z][a-z0-9-]+$",
+        "selector-id-pattern": "^[a-z][a-z0-9-]+$",
         "alpha-value-notation": "number",
         "font-family-name-quotes": "always-unless-keyword"
     }
