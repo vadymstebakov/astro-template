@@ -1,39 +1,8 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-import Card from '@/components/Card.astro';
-import s from './index.module.css';
+import MainLayout from '@/components/layouts/MainLayout/MainLayout.astro';
+import Main from '@/modules/Main/Main.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-    <main class={s.main}>
-        <h1 class={s.title}>
-            Welcome to <span class:list={[{ 'text-gradient': Math.random() * 100 > 5 }]}>Astro</span>
-        </h1>
-        <p class={s.instructions}>
-            To get started, open the directory <code>src/pages</code> in your project.<br />
-            <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-        </p>
-        <ul class={s['link-card-grid']} role="list">
-            <Card
-                href="https://docs.astro.build/"
-                title="Documentation"
-                body="Learn how Astro works and explore the official API docs."
-            />
-            <Card
-                href="https://astro.build/integrations/"
-                title="Integrations"
-                body="Supercharge your project with new frameworks and libraries."
-            />
-            <Card
-                href="https://astro.build/themes/"
-                title="Themes"
-                body="Explore a galaxy of community-built starter themes."
-            />
-            <Card
-                href="https://astro.build/chat/"
-                title="Community"
-                body="Come say hi to our amazing Discord community. ❤️"
-            />
-        </ul>
-    </main>
-</Layout>
+<MainLayout title="Welcome to Astro.">
+    <Main />
+</MainLayout>
