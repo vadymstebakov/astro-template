@@ -58,42 +58,38 @@ npm create astro@latest -- --template vadymstebakov/astro-template
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-└── public/
-    ├── /images
-    ├── apple-touch-icon.png /* An icon 180x180 for iPhone or iPad */
-    ├── favicon.ico /* An icon 32x32 for Safari */
-    └── favicon.svg /* An icon for the rest browsers */
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   ├── pages/
-│   │   └── index.astro
-│   ├── styles/
-│   │   ├── reset.css
-│   │   ├── variables.css
-│   │   └── index.css
-│   ├── constants.ts
-│   ├── types.ts
-│   └── utils.ts
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-`src/layouts/` you can put common layouts, grids etc.
-
-`src/components/` you can put common components.
-
-`src/constants.ts` you can write common constants.
-
-`src/types.ts` you can write common types.
-
-`src/utils.ts` you can write common utils, helpers functions.
+-   `src/ui` contains some shared components without business logic like buttons, inputs, selects, titles, texts etc. Each component should consist of that files:
+    -   `<Component>.astro` - the component file itself;
+    -   `<Component>.module.css` - the styles of component file (optional);
+    -   `types.ts` - the types of component file (optional);
+    -   `constants.ts` - the constants of component file (optional);
+    -   `utils.ts` - the utils of component (optional);
+-   `src/components` a less independent entity consisting of `src/ui` and own components. For example the card component, it can be used anywhere. It can have little business logic. Each component should consist of that files:
+    -   `<Component>.astro` - the component file itself;
+    -   `<Component>.module.css` - the styles of component (optional);
+    -   `types.ts` - the types of component (optional);
+    -   `constants.ts` - the constants of component (optional);
+    -   `utils.ts` - the utils of component (optional);
+    -   `components` - the component dir of components (optional). Should consist of like `src/components`;
+-   `src/modules` contains some independent features, that features have own area of responsibility. It should consist of `src/components`, `src/ui` and own components. Each module should consist of that files:
+    -   `<Component>.astro` - the component of module file itself;
+    -   `<Component>.module.css` - the styles of module (optional);
+    -   `types.ts` - the types of module (optional);
+    -   `constants.ts` - the constants of module (optional);
+    -   `utils.ts` - the utils of module (optional);
+    -   `components` - the component dir of module (optional). Should consist of like `src/components`;
+-   `src/layouts` contains some layouts. It should use like wrapper. Each layout should consist of that files:
+    -   `<Component>.astro` - the layout file itself;
+    -   `<Component>.module.css` - the styles of layout (optional);
+    -   `types.ts` - the types of layout (optional);
+    -   `constants.ts` - the constants of layout (optional);
+    -   `utils.ts` - the utils of layout (optional);
+    -   `components` - the component dir of components (optional);
+-   `src/pages` should consist of contains `src/modules` and just render them. Each page should consist of `.astro` or `.md` files. Each page is exposed as a route based on its file name;
+-   `src/utils.ts` contains global utils;
+-   `src/constants.ts` contains global constants;
+-   `src/types.ts` contains global types;
+-   `src/styles` contains global style files;
 
 Any static assets, like images, fonts can be placed in the `public/` directory.
 

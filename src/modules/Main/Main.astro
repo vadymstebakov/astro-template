@@ -1,36 +1,41 @@
 ---
+import MainLayout from '@/layouts/MainLayout/MainLayout.astro';
 import Card from '@/components/Card/Card.astro';
 import s from './Main.module.css';
 ---
 
-<main class={s.main}>
-    <h1>
-        Welcome to <span class:list={[{ [s['text-gradient']]: Math.random() * 100 > 5, [s.title]: true }]}> Astro</span>
-    </h1>
-    <p class={s.instructions}>
-        To get started, open the directory <code>src/pages</code> in your project.<br />
-        <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-    </p>
-    <ul role="list" class={s['link-card-grid']}>
-        <Card
-            href="https://docs.astro.build/"
-            title="Documentation"
-            body="Learn how Astro works and explore the official API docs."
-        />
-        <Card
-            href="https://astro.build/integrations/"
-            title="Integrations"
-            body="Supercharge your project with new frameworks and libraries."
-        />
-        <Card
-            href="https://astro.build/themes/"
-            title="Themes"
-            body="Explore a galaxy of community-built starter themes."
-        />
-        <Card
-            href="https://astro.build/chat/"
-            title="Community"
-            body="Come say hi to our amazing Discord community. ❤️"
-        />
-    </ul>
-</main>
+<MainLayout title="Welcome to Astro.">
+    <main class={s.main}>
+        <h1>
+            Welcome to <span class:list={[{ [s['text-gradient']]: Math.random() * 100 > 5, [s.title]: true }]}>
+                Astro</span
+            >
+        </h1>
+        <p class={s.instructions}>
+            To get started, open the directory <code>src/pages</code> in your project.<br />
+            <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+        </p>
+        <ul role="list" class={s['link-card-grid']}>
+            <Card
+                href="https://docs.astro.build/"
+                title="Documentation"
+                body="Learn how Astro works and explore the official API docs."
+            />
+            <Card
+                href="https://astro.build/integrations/"
+                title="Integrations"
+                body="Supercharge your project with new frameworks and libraries."
+            />
+            <Card
+                href="https://astro.build/themes/"
+                title="Themes"
+                body="Explore a galaxy of community-built starter themes."
+            />
+            <Card
+                href="https://astro.build/chat/"
+                title="Community"
+                body="Come say hi to our amazing Discord community. ❤️"
+            />
+        </ul>
+    </main>
+</MainLayout>
