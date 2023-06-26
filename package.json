@@ -21,7 +21,7 @@
         "prepare": "husky install"
     },
     "dependencies": {
-        "astro": "^2.1.4"
+        "astro": "^2.7.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^17.6.6",
