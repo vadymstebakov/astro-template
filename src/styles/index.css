@@ -1,11 +1,18 @@
 @import url("./variables.css");
 @import url("./reset.css");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    body .visually-hidden {
+        @apply absolute h-[1px] w-[1px] m-[-1px] p-0 border-0 overflow-hidden;
+
+        clip: rect(0 0 0 0);
+    }
+}
+
 body {
-    font-family: var(--font-primary);
-    color: var(--color-primary);
-    background-image: url("/images/venice.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
+    @apply font-primary text-black bg-cover bg-no-repeat bg-center	 bg-[url('/images/venice.jpg')];
 }
