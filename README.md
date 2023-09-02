@@ -9,7 +9,7 @@ npm create astro@latest -- --template vadymstebakov/astro-template
 ## ⚙️ Setup
 
 1. Install [NodeJS](https://nodejs.org/en/);
-    > Require [Node.js](https://nodejs.org) version >= 16.12.0.
+    > Require [Node.js](https://nodejs.org) version >= 18.14.1.
 2. Install the NPM dependencies by running `npm ci`;
 3. If it makes sense, you should create `.env.local` file for secret keys (look at `env.local.example` file), if the project has secret variables. Read more about [environment variables](https://docs.astro.build/en/guides/environment-variables/);
 
@@ -60,27 +60,23 @@ npm create astro@latest -- --template vadymstebakov/astro-template
 
 -   `src/ui` contains some shared components without business logic like buttons, inputs, selects, titles, texts etc. Each component should consist of that files:
     -   `<Component>.astro` - the component file itself;
-    -   `<Component>.module.css` - the styles of component file (optional);
     -   `types.ts` - the types of component file (optional);
     -   `constants.ts` - the constants of component file (optional);
     -   `utils.ts` - the utils of component (optional);
 -   `src/components` a less independent entity consisting of `src/ui` and own components. For example the card component, it can be used anywhere. It can have little business logic. Each component should consist of that files:
     -   `<Component>.astro` - the component file itself;
-    -   `<Component>.module.css` - the styles of component (optional);
     -   `types.ts` - the types of component (optional);
     -   `constants.ts` - the constants of component (optional);
     -   `utils.ts` - the utils of component (optional);
     -   `components` - the component dir of components (optional). Should consist of like `src/components`;
 -   `src/modules` contains some independent features, that features have own area of responsibility. It should consist of `src/components`, `src/ui` and own components. Each module should consist of that files:
     -   `<Component>.astro` - the component of module file itself;
-    -   `<Component>.module.css` - the styles of module (optional);
     -   `types.ts` - the types of module (optional);
     -   `constants.ts` - the constants of module (optional);
     -   `utils.ts` - the utils of module (optional);
     -   `components` - the component dir of module (optional). Should consist of like `src/components`;
 -   `src/layouts` contains some layouts. It should use like wrapper. Each layout should consist of that files:
     -   `<Component>.astro` - the layout file itself;
-    -   `<Component>.module.css` - the styles of layout (optional);
     -   `types.ts` - the types of layout (optional);
     -   `constants.ts` - the constants of layout (optional);
     -   `utils.ts` - the utils of layout (optional);

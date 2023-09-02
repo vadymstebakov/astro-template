@@ -5,7 +5,6 @@
         "paths": {
             "@/*": ["src/*"]
         },
-        "importsNotUsedAsValues": "error",
         "target": "ES2020"
     }
 }

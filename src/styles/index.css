@@ -1,2 +1,11 @@
 @import url("./variables.css");
 @import url("./reset.css");
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    background-image: url("/images/venice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
